@@ -5,7 +5,8 @@ while True:
     print("1.add student")
     print("2.View Students")
     print("3.search student")
-    print("4.Exit")
+    print("4:delete student")
+    print("5.Exit")
 
     choice=int(input("Enter your choice :"))
 
@@ -48,7 +49,7 @@ while True:
 
                 print("\nStudent is active")
                 print("Name:",student["name"])
-                print("age:",student["age"])
+                print("Age:",student["age"])
 
                 found =True
 
@@ -56,6 +57,26 @@ while True:
             print("Student is not active")
 
     elif choice == 4:
+        print("SELECTED DELETING OPTION")
+
+        delete_name = input("Enter the student name to delete :")
+
+        found=False
+
+        for student in students:
+            if student["name"].lower() == delete_name.lower():
+
+                students.remove(student)
+                print("student deleted successfully")
+                found = True
+                break
+
+        if not found:
+
+            print("there is no data")        
+
+    elif choice == 5:
+
         print("PROGRAME EXIT")
 
         break   
