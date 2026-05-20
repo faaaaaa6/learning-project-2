@@ -4,7 +4,8 @@ while True:
     print("\n---Student Management Sytstem---")
     print("1.add student")
     print("2.View Students")
-    print("3.Exit")
+    print("3.search student")
+    print("4.Exit")
 
     choice=int(input("Enter your choice :"))
 
@@ -35,6 +36,26 @@ while True:
                 print("age",["age"])       
 
     elif choice == 3:
+        print("SEARCH STUDENT SELECTED")
+
+        search_name = input("Enter student name to search: ")
+
+        found = False
+
+        for student in students:
+
+            if student["name"].lower() == search_name.lower():
+
+                print("\nStudent is active")
+                print("Name:",student["name"])
+                print("age:",student["age"])
+
+                found =True
+
+        if not found:
+            print("Student is not active")
+
+    elif choice == 4:
         print("PROGRAME EXIT")
 
         break   
@@ -44,4 +65,3 @@ while True:
 
                 
 
-                
