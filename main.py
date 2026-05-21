@@ -6,7 +6,8 @@ while True:
     print("2.View Students")
     print("3.search student")
     print("4:delete student")
-    print("5.Exit")
+    print("5:Update student")
+    print("6.Exit")
 
     choice=int(input("Enter your choice :"))
 
@@ -73,9 +74,35 @@ while True:
 
         if not found:
 
-            print("there is no data")        
+            print("there is no data") 
 
     elif choice == 5:
+        print("UPDATE STUDENT SELECTED")
+
+        update_name = input("Enter student name to update :")
+
+        found = False
+
+        for student in students:
+
+            if student["name"].lower() == update_name.lower():
+
+             new_name = input("Enter new name:")
+             new_age = int(input("Enter new age:"))
+
+
+             student["name"] = new_name
+             student["age"] = new_age
+
+             print("student updated successfully")
+
+             found = True
+
+             break
+
+        if not found:
+            print("student not found")
+    elif choice == 6:
 
         print("PROGRAME EXIT")
 
