@@ -12,103 +12,103 @@ while True:
     choice=int(input("Enter your choice :"))
 
     if choice == 1:
-        print("ADD STUDENT SELECTED")
-        name = input("Enter student name: ")
-        age = int(input("Enter student age: "))
+         print("ADD STUDENT SELECTED")
+         name = input("Enter student name: ")
+         age = int(input("Enter student age: "))
 
-        student = {
+         student = {
              
              "name": name,
              "age": age
-        }
+         }
 
-        students.append(student)
+         students.append(student)
 
-        print("student added successfully") 
+         print("student added successfully") 
     elif choice == 2:
-        print("VIEW STUDENT SELECTED")
+         print("VIEW STUDENT SELECTED")
 
-        if len(students) ==0:
-           print("no student data found")
+         if len(students) ==0:
+            print("no student data found")
 
-        else:
-            for student in students:
-                print("\nStudent Details")
-                print("Name:",student["name"])
-                print("age",["age"])       
+         else:
+             for student in students:
+                 print("\nStudent Details")
+                 print("Name:",student["name"])
+                 print("age",["age"])       
 
     elif choice == 3:
-        print("SEARCH STUDENT SELECTED")
+         print("SEARCH STUDENT SELECTED")
 
-        search_name = input("Enter student name to search: ")
+         search_name = input("Enter student name to search: ")
 
-        found = False
+         found = False
 
-        for student in students:
+         for student in students:
 
-            if student["name"].lower() == search_name.lower():
+             if student["name"].lower() == search_name.lower():
 
-                print("\nStudent is active")
-                print("Name:",student["name"])
-                print("Age:",student["age"])
+                 print("\nStudent is active")
+                 print("Name:",student["name"])
+                 print("Age:",student["age"])
 
-                found =True
+                 found =True
 
-        if not found:
-            print("Student is not active")
+         if not found:
+             print("Student is not active")
 
     elif choice == 4:
-        print("SELECTED DELETING OPTION")
+         print("SELECTED DELETING OPTION")
 
-        delete_name = input("Enter the student name to delete :")
+         delete_name = input("Enter the student name to delete :")
 
-        found=False
+         found=False
 
-        for student in students:
-            if student["name"].lower() == delete_name.lower():
+         for student in students:
+             if student["name"].lower() == delete_name.lower():
 
-                students.remove(student)
-                print("student deleted successfully")
-                found = True
-                break
+                 students.remove(student)
+                 print("student deleted successfully")
+                 found = True
+                 break
 
-        if not found:
+         if not found:
 
-            print("there is no data") 
+             print("there is no data") 
 
     elif choice == 5:
-        print("UPDATE STUDENT SELECTED")
+         print("UPDATE STUDENT SELECTED")
 
-        update_name = input("Enter student name to update :")
+         update_name = input("Enter student name to update :")
 
-        found = False
+         found = False
 
-        for student in students:
+         for student in students:
 
-            if student["name"].lower() == update_name.lower():
+             if student["name"].lower() == update_name.lower():
 
-             new_name = input("Enter new name:")
-             new_age = int(input("Enter new age:"))
+              new_name = input("Enter new name:")
+              new_age = int(input("Enter new age:"))
 
 
-             student["name"] = new_name
-             student["age"] = new_age
+              student["name"] = new_name
+              student["age"] = new_age
 
-             print("student updated successfully")
+              print("student updated successfully")
 
-             found = True
+              found = True
 
-             break
+              break
 
-        if not found:
-            print("student not found")
+         if not found:
+             print("student not found")
     elif choice == 6:
 
-        print("PROGRAME EXIT")
+         print("PROGRAME EXIT")
 
-        break   
+         break   
     else:
-        print("invalid operation")    
+         print("invalid operation")    
 
 
                 
